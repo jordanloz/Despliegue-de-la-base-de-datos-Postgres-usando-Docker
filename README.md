@@ -1,10 +1,10 @@
 
--------# Despliegue-de-la-base-de-datos-Postgres-usando-Docker
-------------------------------------------------------------------
+# Despliegue-de-la-base-de-datos-Postgres-usando-Docker
+----
 creamos la red 
 
 docker network create pg_network
-------------------------------------------------------------------
+--
 
 docker run -d --name pg_server -e POSTGRES_PASSWORD=3125186957 -p 5432:5432 -v pg_db:/var/lib/postgresql/data --network pg_network postgres:15-bookworm
 docker run -d --name pg_server -e POSTGRES_PASSWORD=3125186957 -p 5432:5432 -v pg_db:/var/lib/postgresql/data --network pg_network postgres
